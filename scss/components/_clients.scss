@@ -1,0 +1,99 @@
+/* clients styles start */
+.clients {
+    background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url(../img/clients-bg.png) no-repeat center/cover;
+
+
+    &__list {
+        margin-top: 100px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-content: center;
+        min-height: 400px;
+
+
+    }
+
+    &__item {
+        width: 50%;
+        padding: 0 45px 0 175px;
+        position: relative;
+        margin-bottom: 85px;
+        @include breakpoint($tablet1-bp){
+            width: 100%;
+            padding: 0 50px 0 190px;
+        }
+        @include breakpoint($mobile2-bp){
+            padding-left: 0;
+            padding-right: 0;
+            text-align: center;
+        }
+    }
+
+    &__photo {
+        position: absolute;
+        top: 0;
+        left: 40px;
+        border-radius: 50%;
+        border: 2px solid #b5eae0;
+        @include breakpoint($tablet1-bp){
+            width: 125px;
+            height: 125px;
+        }
+        @include breakpoint($mobile2-bp){
+            position: static;
+            margin: 0 auto;
+        }
+
+    }
+
+    &__content {
+        font-size: 16px;
+
+    }
+
+    &__name {
+        font-size: 14px;
+        line-height: 1.2;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #333333;
+        margin-bottom: 10px;
+        @include breakpoint($mobile2-bp){
+            margin-top: 15px;
+        }
+    }
+
+    &__prof {
+        font-family: 'Roboto', sans-serif;
+        font-size: 15px;
+        line-height: 24px;
+        font-weight: 300;
+        font-style: italic;
+        color: #333333;
+    }
+
+    &__reviews {
+        font-family: 'Roboto', sans-serif;
+        font-size: 15px;
+        line-height: 24px;
+        font-weight: 400;
+        color: #999999;
+
+        &::before {
+            content: "";
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: #f38181;
+            top: 0;
+            left: 0;
+            margin: 15px 0;
+            @include breakpoint($mobile2-bp){
+                margin: 20px auto;
+            }
+        }
+    }
+}
+
+/* clients styles end */

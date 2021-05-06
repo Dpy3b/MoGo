@@ -1,0 +1,50 @@
+.stats {
+    background-color: #95e1d3;
+
+    &__list {
+        display: flex;
+        @include breakpoint($tablet1-bp){
+            display: block;
+            border-bottom: 2px solid $teal;
+            border-left: none;
+        }
+    }
+
+    &__item {
+        flex: 1 1 0;
+        color: #fff;
+        text-align: center;
+        padding: 60px 20px;
+        border-left: 2px solid $teal;
+        @include breakpoint($tablet1-bp){
+            border-bottom: 2px solid $teal;
+            border-left: none;
+
+        }
+
+        &:last-child {
+            border-right: 2px solid $teal;
+            @include breakpoint($tablet1-bp){
+                border: none;
+            }
+        }
+
+
+    }
+
+    &__count {
+        font-size: 72px;
+        line-height: 1.2;
+        font-weight: 700;
+        text-transform: uppercase;
+
+    }
+
+    &__title {
+        font-size: 14px;
+        line-height: 1.2;
+        font-weight: 400;
+        text-transform: uppercase;
+
+    }
+}

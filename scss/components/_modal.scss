@@ -1,0 +1,56 @@
+.modal{
+    &__content__maps{
+        width: 100%;
+        height: 100%;
+        border-radius: 5px;
+    }
+    &__overlay{
+        opacity: 0;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: rgba(0, 0, 0, 0.9);
+        pointer-events: none;
+        transition: all 0.5s ease-in-out;
+        &.active{
+            opacity: 1;
+            pointer-events: all;
+        }
+    }
+}
+
+.button__close__modal{
+    background-color: transparent;
+    border: none;
+    outline: 0;
+    position: absolute;
+    top: -1.5vmax;
+    right: -5vmax;
+}
+.close__modal__icon{
+    width: 2.5vw;
+    height: 2.5vh;
+    fill: #95e1d3;
+    @include breakpoint($mobile2-bp){
+        width: 4.5vw;
+        height: 4.5vh;
+    }
+}
+
+#modal{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: all 0.5s ease-in-out;
+    width: 80vw;
+    height: 80vh;
+    max-width: 100%;
+    z-index: 102;
+    &.active{
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+

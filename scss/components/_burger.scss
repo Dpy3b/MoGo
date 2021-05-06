@@ -1,0 +1,71 @@
+.burger{
+    background: 0 0;
+    outline: 0;
+    border: none;
+    width: 35px;
+    height: 35px;
+    visibility: hidden;
+    z-index: 6;
+    position: absolute;
+    font-size: 0;
+    @include breakpoint($tablet1-bp){
+        visibility: visible;
+        position: static;
+    }
+    &--active{
+        .burger__item{
+            background: rgba(0,0,0,0);
+            transition: all .1s linear;
+            box-shadow: 0 2px 5px transparent;
+        }
+        .burger__item::before {
+            transform: rotate(45deg);
+            top: 0;
+            transition: all .4s linear;
+        }
+        .burger__item::after {
+            transform: rotate(-45deg);
+            top: 0;
+            transition: all .4s linear;
+        }
+    }
+
+
+    &__item{
+        background-color: #fff;
+        display: block;
+        height: 3px;
+        width: 100%;
+        position: relative;
+        transition: all .4s linear;
+        box-shadow: 0 2px 5px transparent;
+        /* ниже для скрытия текста, а текст был нужен прост так */
+        font-size: 0;
+        color: transparent;
+
+        &::before, &::after{
+            content: '';
+            display: block;
+            position: absolute;
+            height: 3px;
+            width: 100%;
+            background-color: #fff;
+            transition: all .4s linear;
+            box-shadow: 0 2px 5px transparent;
+        }
+        &::before {
+            top: -8px;
+            .burger--active{
+                transform: rotate(45deg);
+                top: 0;
+            }
+        }
+        &::after {
+            top: 8px;
+            .burger--active{
+                transform: rotate(-45deg);
+                top: 0;
+            }
+        }
+    }
+}

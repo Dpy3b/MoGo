@@ -1,0 +1,41 @@
+.header {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 5;
+    padding-top: 30px;
+
+    &--fixed{
+        background-color: #ec908f;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        background-color: #f38181;
+        padding: 5px 0;
+        transition: all .4s ease;
+        box-shadow: 0 1px 7px 0 #4c4c4c;
+        z-index: 101;
+    }
+
+    &__logo {
+        /* font-size: 30px;
+        font-weight: 700;
+        color: #fff;
+        margin: 0 15px; */
+        &-pic{
+            z-index: 1;
+            margin: 0 15px;
+        }
+    }
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5px 0;
+    }
+
+}

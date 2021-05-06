@@ -1,0 +1,9 @@
+//@import "./mixins/breakpoint";
+//@import "./mixins/burger";
+//@import "./mixins/font-face";
+
+@mixin breakpoint($bp) {
+    @media screen and (max-width: $bp) {
+        @content;
+    }
+}

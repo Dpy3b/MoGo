@@ -1,0 +1,36 @@
+.map {
+    &__title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 24px;
+        color: #f38181;
+        font-weight: 700;
+
+    }
+
+    &__icon {
+        margin-bottom: 10px;
+    }
+
+    &__link__open {
+        color: #f38181;
+        background-color: transparent;
+        text-transform: uppercase;
+        font-size: 24px;
+        border: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+
+        &::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: #f38181;
+            margin: 15px auto 0;
+        }
+    }
+}

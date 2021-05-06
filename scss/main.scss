@@ -1,0 +1,58 @@
+@import "./global.scss";
+@import "./vendor.scss";
+
+html{
+    font-size: 62.5%;
+}
+body{
+    overflow-x: hidden;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    color: #333;
+    line-height: 1.6;
+
+}
+
+body::-webkit-scrollbar {
+    width: 1em;
+}
+
+body::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+    /* outline: 1px solid slategrey; */
+    background: linear-gradient(to right, #fa709a 0%, #fee140 100%);
+}
+
+
+@import "./components/wrapper";
+@import "./components/header";
+@import "./components/intro";
+@import "./components/nav";
+@import "./components/burger";
+@import "./components/section";
+@import "./components/card";
+@import "./components/stats";
+@import "./components/services";
+@import "./components/devices";
+@import "./components/wedo";
+@import "./components/accordion";
+@import "./components/reviews";
+@import "./components/team";
+@import "./components/logos";
+@import "./components/work";
+@import "./components/clients";
+@import "./components/blog";
+@import "./components/map";
+@import "./components/modal";
+@import "./components/social";
+@import "./components/subscribe";
+@import "./components/publication";
+@import "./components/instagram";
+@import "./components/footer";
+
+
+
+

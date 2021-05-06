@@ -1,0 +1,115 @@
+.card {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 30px;
+    @include breakpoint($tablet2-bp){
+        justify-content: center;
+        grid-template-columns: minmax(200px,400px);
+        grid-row-gap: 30px;
+    }
+
+    &__item {
+        text-align: center;
+        position: relative;
+        align-content: center;
+        transition: all .3s linear;
+
+    }
+
+    &__background {
+        position: relative;
+        background-color: #95e1d3;
+        opacity: 1;
+        cursor: pointer;
+    }
+
+    &__inner {
+        z-index: 2;
+        transition: all .3s linear;
+
+        &:hover .card__content {
+            opacity: 1;
+        }
+
+        &:hover .card__img::after {
+            opacity: 0.8;
+        }
+
+        &:hover {
+            transform: translate(-10px, -10px);
+        }
+
+    }
+
+    &__img {
+
+        &::after {
+            display: block;
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: linear-gradient(to bottom, #f38181, #fce38a);
+            opacity: 0;
+            transition: all .3s linear;
+        }
+
+        &:hover::after {
+            opacity: 0.8;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+            transition: opacity .1s linear;
+
+        }
+    }
+
+    &__content {
+        max-width: 100%;
+        font-size: 18px;
+        font-weight: 700;
+        text-transform: uppercase;
+        text-align: center;
+        opacity: 0;
+        color: #fff;
+        -webkit-transition: opacity .3s linear;
+        -o-transition: opacity .3s linear;
+        transition: opacity .3s linear;
+        z-index: 2;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        &__icon {
+            fill: #fff;
+            height: 3vmax;
+            width: 3vmax;
+        }
+    }
+
+    &__info {
+        margin-top: 15px;
+    }
+
+    &__name {
+        text-transform: uppercase;
+        color: #333;
+        font-size: 14px;
+        font-weight: 700;
+        margin-bottom: 5px;
+    }
+
+    &__prof {
+        color: #999;
+        font-size: 15px;
+        font-family: 'Roboto', sans-serif;
+        font-style: italic;
+        font-weight: 300;
+    }
+}

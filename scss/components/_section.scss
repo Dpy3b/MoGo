@@ -1,0 +1,64 @@
+.section {
+    padding: 40px 0;
+    @include breakpoint($tablet2-bp){
+        padding: 40px 0;
+    }
+    @include breakpoint($mobile2-bp){
+        margin: 50px 0;
+    }
+
+    &__header {
+        width: 100%;
+        max-width: 950px;
+        margin: 0 auto 50px;
+        text-align: center;
+        @include breakpoint($mobile-bp){
+            margin-bottom: 50px;
+        }
+    }
+
+    &__suptitle {
+        font-family: 'Kaushan Script', cursive;
+        font-size: 24px;
+        line-height: 1.2;
+        margin: 23px 0;
+        @include breakpoint($mobile-bp){
+            font-size: 20px;
+        }
+    }
+
+    &__title {
+        font-family: "Montserrat", sans-serif;
+        font-size: 30px;
+        font-weight: 700;
+        text-transform: uppercase;
+        @include breakpoint($mobile-bp){
+            font-size: 24px;
+        }
+
+        &::after {
+            content: "";
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: #f38181;
+            margin: 40px auto;
+
+
+        }
+    }
+
+    &__text {
+        font-family: 'Roboto', sans-serif;
+        font-size: 15px;
+        line-height: 24px;
+        color: #999;
+    }
+
+    &--gray{
+        background-color: #f8f8f8;
+    }
+    &--map{
+        background: linear-gradient( rgba(255,255,255, 0.7), rgba(255,255,255, 0.7)), url(../img/map_bg.png) no-repeat center/cover;
+    }
+}

@@ -1,0 +1,137 @@
+.subscribe {
+    &__logo {
+        font-size: 46px;
+        line-height: 1.2;
+        font-weight: 700;
+        color: #cccccc;
+        margin-bottom: 40px;
+        @include breakpoint($tablet1-bp){
+            margin-bottom: 20px;
+        }
+    }
+
+    &__text {
+        font-family: 'Roboto', sans-serif;
+        font-size: 15px;
+        line-height: 24px;
+        font-weight: 400;
+        color: #999999;
+        margin-bottom: 50px;
+        @include breakpoint($tablet1-bp){
+            margin-bottom: 40px;
+        }
+    }
+
+    &__stat {
+        padding-bottom: 20px;
+        border-bottom: 1px solid #e5e5e5;
+        margin-bottom: 20px;
+    }
+
+    &__quantity {
+        font-size: 18px;
+        line-height: 1.2;
+        font-weight: 700;
+        color: #333333;
+    }
+
+    &__follower {
+        font-size: 14px;
+        font-weight: 400;
+    }
+
+    &__list {
+        list-style: none;
+        margin-bottom: 40px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__proposal {
+        font-family: Roboto;
+        font-size: 15px;
+        line-height: 24px;
+        font-weight: 300;
+        font-style: italic;
+        color: #999999;
+        margin-right: 20px;
+        @include breakpoint($mobile2-bp){
+            width: 100%;
+            margin-bottom: 20px;
+            margin-right: 0;
+        }
+    }
+
+    &__item {
+        &:not(:last-child) {
+            margin-right: 15px;
+        }
+    }
+
+
+    &__link {
+        cursor: pointer;
+
+        &__icon {
+            fill: #95e1d3;
+            width: 18px;
+            height: 18px;
+            -webkit-transition: all .2s linear;
+            -o-transition: all .2s linear;
+            transition: all .2s linear;
+        }
+    }
+
+    &__form {
+        width: 100%;
+        max-width: 380px;
+        display: flex;
+        @include breakpoint($mobile2-bp){
+            max-width: 100%;
+            flex-wrap: wrap;
+        }
+    }
+
+    &__input {
+        font-family: 'Roboto', sans-serif;
+        padding: 15px;
+        font-size: 15px;
+        outline: 0;
+        font-weight: 300;
+        font-style: italic;
+        color: #cccccc;
+        border: 1px solid #e5e5e5;
+        width: 60%;
+
+        &::-webkit-input-placeholder {
+            color: #ccc;
+        }
+        @include breakpoint($tablet1-bp){
+            width: 70%;
+        }
+        @include breakpoint($mobile2-bp){
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+    }
+
+    &__btn {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #ffffff;
+        background-color: #95e1d3;
+        padding: 15px 30px;
+        border: none;
+        @include breakpoint($tablet1-bp){
+            width: 30%;
+            padding: 7px 7px;
+        }
+        @include breakpoint($mobile2-bp){
+            width: 100%;
+            padding: 13px 15px;
+        }
+    }
+}

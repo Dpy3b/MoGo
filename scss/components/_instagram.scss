@@ -1,0 +1,50 @@
+.instagram {
+
+    &__title {
+        font-size: 14px;
+        line-height: 1.2;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #333333;
+        margin-bottom: 40px;
+    }
+
+    &__photo__list {
+        display: flex;
+        margin-bottom: 2px;
+
+    }
+
+    &__buttoncase {
+        margin-top: 20px;
+
+    }
+
+    &__more {
+
+        font-family: 'Roboto', sans-serif;
+        font-size: 13px;
+        line-height: 24px;
+        font-weight: 300;
+        font-style: italic;
+        color: #333333;
+        text-decoration: none;
+        transition: 0.3s;
+        border-bottom: 1px solid transparent;
+
+        &:hover {
+            border-color: #333;
+
+
+        }
+    }
+
+}
+
+.photo__item {
+    margin-right: 2px;
+
+    &:last-child {
+        margin-right: 0;
+    }
+}

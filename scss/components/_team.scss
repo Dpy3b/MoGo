@@ -1,0 +1,26 @@
+.team {
+    display: flex;
+    justify-content: center;
+
+    &__item {
+        width: 55px;
+        height: 55px;
+        padding: 10px;
+        background-color: #fce38a;
+        border-right: 1px solid #f38181;
+        font-size: 30px;
+        color: #f38181;
+        line-height: 1;
+        transition: 0.5s;
+
+        &:last-child {
+            border-right: none;
+        }
+
+        &:hover {
+            background-color: #f38181;
+            color: #fff;
+        }
+    }
+
+}

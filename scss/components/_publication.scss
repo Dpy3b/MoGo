@@ -1,0 +1,88 @@
+.publication {
+    &__title {
+        margin-bottom: 40px;
+
+        font-size: 14px;
+        line-height: 1.2;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #333333;
+    }
+
+    &__list {
+        list-style: none;
+
+
+    }
+
+    &__item {
+        margin-bottom: 30px;
+
+    }
+
+    &__link {
+        text-decoration: none;
+        color: #333;
+        /* ниже какие-то левые стили, хз откуда они взялись, скорее всего из другого места случайно ctrl c+ctrl v */
+        font-size: 12px;
+        line-height: 18px;
+        font-weight: 400;
+        text-transform: uppercase;
+        color: #333333;
+
+        &__title {
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            font-size: 12px;
+            line-height: 1.8;
+            font-weight: 700;
+            @media only screen and (max-width: 320px){
+                font-size: 11px;
+                line-height: 1.6;
+            }
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+
+
+        &__date {
+            color: #ccc;
+            font-style: italic;
+            font-weight: 300;
+            font-size: 13px;
+            font-family: 'Roboto', sans-serif;
+        }
+    }
+
+
+    &__content {
+        display: flex;
+        align-items: center;
+        @include breakpoint($mobile2-bp){
+            display: grid;
+            grid-template-columns: minmax(auto,400px);
+            justify-content: flex-start;
+        }
+    }
+    &__photo{
+        width: 100%;
+        max-width: 120px;
+    }
+
+    &__photo-pic {
+        width: 120px;
+        height: 80px;
+    }
+
+    &__text {
+        margin-left: 20px;
+        @include breakpoint($mobile2-bp){
+            margin-left: 0;
+            margin-top: 20px;
+        }
+    }
+
+}
